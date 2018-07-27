@@ -5,21 +5,34 @@
 body {
     font-size: 30px;
     color: var(--bg-color);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: lato;
     margin:0;
+    letter-spacing: 1px;    
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    background-color: #6633cc;
+    margin: 6px;
+    color: #fff;
+    padding: 0px 30px 0px 20px;
+    display: table-caption;
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: rgb(16, 169, 237);
 }
 h4 {
     margin: 0;
 }
 .navTop {
     position: fixed;
-    background-color: black;
+    background-image: url("../images/header_bg.png");
     width: 100%;
-    top: 0;
-    padding-left: 0px;
-    opacity: .8;
-    max-height: 500px;
-    padding-bottom: 6px;
+    height: 70px;
+    display: table-caption;
 }
 
 .left {
@@ -41,43 +54,159 @@ h4 {
     display: inline;
 }
 .right li a{
-    text-align: right;
     padding: 10px 20px 0px 0px;
     color: white;
     font-size: 14px;
     text-decoration: none;
     display: inline-block;
-    margin-right: 10px;
+    margin:17px;
 }
 .right a:hover {
     text-decoration: underline;
 }
 .right button {    
     border: 2px solid #fff;
-    padding: .5em;
+    border-radius: 20px;
+    padding: 10px 20px;
     font-size: 14px;
     margin-right: 30px;
     font-weight: 600;
     color: #fff;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     text-decoration: none;
     background-color: transparent;
     box-sizing: border-box;
 }
-.segment {
-    height: 500px;
+.segment-one button {
+    background-color: #e51a94;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
 }
 .segment-one {
-    background-image: url("../images/telmex_2.jpg")
+    height: 500px;
+    background-image: url("../images/caravana_banner.png")
 }
-
 .segment-one .content {
-    padding-top: 200px;
-}
-.segment .content {
+    padding-top: 150px;
     margin: 0 auto;
-    width: 800px;
+    width: 700px;
+    height: 500px;
+}
+.segment-one span {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 9px #fff;
+}
+.segment-two {
+    display: flex;
 }
 .segment-two .content {
-    padding-top: 100px;
+    margin-top: -50px;
+    width: 40%;
+    flex: 44%;
+    margin-left: 100px;
+    padding: 100px 50px 100px 0px;
+}
+.segment-two img {
+    width: 100%;
+}
+.segment-two p {
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.segment-two button {
+    background-color: #e51a94;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+}
+.discount {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+.discount .content {
+    width: 800px;
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 26px;
+}
+.discount span {
+    font-size: 20px;
+}
+.discount input {
+    font-size: 14px;
+    color: grey;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+}
+.discount button {
+    background-color: #e51a94;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+}    
+.results {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;  
+}
+.results article {
+    width: calc(1/3*100% - 30px);
+    margin: 15px;
+    color: black;
+    font-size: 16px;
+}
+.segment-three {
+    height: 600px;
+    background-image: url("../images/bg_yellow.png")
+}
+.segment-three h2 {
+    text-align: center;
+}
+.segment-three .content{
+    padding-top: 10px;
+    width: 700px;
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 26px;
+}
+.segment-four {
+    background-color: #e51a94;
+    height: 900px;
+}
+.segment-four h2{
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(5, 1fr);
+}
+.a {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.wrapper img {
+    width: 100%;
+    display: table-row-group;
 }
