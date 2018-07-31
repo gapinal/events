@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 body {
-    font-size: 30px;
+    font-size: 16px;
     color: var(--bg-color);
     font-family: lato;
     margin:0;
@@ -82,6 +82,7 @@ h4 {
     border-radius: 20px;
     padding: 10px 20px;
     font-size: 14px;
+    margin-top: 20px;
     color: #fff;
     letter-spacing: 1px;
     border: none;
@@ -99,8 +100,9 @@ h4 {
 .segment-one span {
     color: black;
     font-size: 20px;
+    font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 9px #fff;
+    text-shadow: -6px 2px 9px #fff;
 }
 .segment-two {
     display: flex;
@@ -182,8 +184,6 @@ h4 {
     text-align: center;
 }
 .segment-three .content{
-    padding-top: 10px;
-    width: 700px;
     margin: 0 auto;
     width: 900px;
     padding-top: 26px;
@@ -195,7 +195,24 @@ h4 {
 .segment-four h2{
     color: #fff;
     text-align: center;
-    padding-top: 30px;
+}
+.segment-four .content{
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 26px;
+    
+} 
+.menu-top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    text-align: center;
+}
+.menu-top li a{
+    margin: 14px;
+    color: #fff;
+    text-decoration: none;
 }
 .wrapper {
     display: grid;
@@ -210,3 +227,75 @@ h4 {
     width: 100%;
     display: table-row-group;
 }
+.menu-top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.segment-five {
+    background-image: url("../images/bg_reserva.png");
+    height: 517px;
+}
+.segment-five h2 {
+    text-align: center;
+    color: #fff;
+    margin: 40px 0px 20px 0px;
+}
+.segment-five .content {
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 26px;
+    justify-content: center;
+}
+.segment-five span {
+    display: block;
+    text-align: center;
+    margin: 14px;
+}
+/*first of list and last?*/
+.segment-five input {
+    width: 400px;
+    margin: 10px; 
+    font-size: 14px;
+    color: grey;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+}    
+.segment-five button {
+    background-color: #e51a94;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+}
+.footer-one {
+    background-image: url("../images/bg_footer.png");
+    height: 402px;
+}
+.footer-one .content {
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 72px;
+    justify-content: center;
+    display: grid;
+    grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+.footer-one div{    
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+.footer-one span{
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+.footer-two {
+    background: black;
+    height: 200px;
+}    
