@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css"/>
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link href="images/favicon.png" rel="icon">
-    <script src="main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
@@ -22,12 +21,13 @@
                 <li><a href="#">NOSOTROS</a></li>
                 <li><a href="#">PROMOCIONES</a></li>
                 <li><a href="#">MENÚ</a></li>
-                <li><a href="#">Haz tu Reservación</a></li>
                 <button type="button" name="button">CONTACTO</button>
+                <li><a href="#">HAZ TU RESERVACIÓN</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i>3628·1829</a></li>  
             </ul>
         </header>
     </nav>
-    <div class="segment-one">
+    <div class="main-banner">
         <div class="content">
             <div><h1>DELICIOSAMENTE</h1></div> 
             <div><h1>DIVERTIDO</h1></div>
@@ -38,22 +38,21 @@
     <div class="discount">
         <div class="content">
             <span>¡Obtén tu cupón de DESCUENTO!</span>
-            <input type="Nombre" placeholder="Nombre*" name="name" id="">
+            <input type="name" placeholder="Nombre*" name="name" id="">
             <input type="email" placeholder="Email*" name="email" id="">
             <button type="button" name="button">ENVIAR</button>
         </div>
     </div>
-    <div class="segment-two">
+    <div class="nosotros">
         <div class="content">
             <h2>NOSOTROS</h2> 
             <p>El mejor Restaurante dedicado al espacio lúdico de Juegos de Mesa. Contamos con los mejores juegos de mesa, tienda, expertos en diversión y un menú deliciosamente divertido. 
             <br><br>El mejor Restaurante dedicado al espacio lúdico de Juegos de Mesa. Contamos con los mejores juegos de mesa, tienda. expertos en diversión y un menú deliciosamente divertido. 
             </p>    
             <div><button type="button" name="button">RESERVA</button></div>            
-        </div>
-        <div><img src="images/people.png" alt=""></div>          
+        </div>       
     </div>
-    <div class="segment-three">
+    <div class="promos">
         <div class="content">
             <h2>PROMOCIONES</h2>
             <div class="wrapper">
@@ -67,70 +66,99 @@
               </div>
         </div>
     </div>
-    <div class="segment-four">
+    <div class="menu">
         <div class="content">
-            <div><h2>MENÚ</h2></div>
-            <ul class="menu-top">                    
-                <li><a href="#">BEBIDAS</a></li>
-                <li><a href="#">ENSALADAS</a></li>
-                <li><a href="#">POSTRES</a></li>
-                <li><a href="#">ENTRADAS</a></li>
-                <li><a href="#">PIZZAS</a></li>
-                <li><a href="#">PEPITOS</a></li>
-                <li><a href="#">HAMBURGUESAS</a></li>
-                <li><a href="#">CORTES</a></li>
-            </ul> 
+            <div><h2>MENÚ</h2></div>     
+            <ul class="menu-top">
+                <li class='menu-selector' data-container='menu-bebidas'>bebidas</li>
+                <li class='menu-selector' data-container='menu-salads'>ensaladas</li>
+            </ul>      
+                  <div id="menu-bebidas" class="menu"></div>
+                  <div id="menu-salads" class="menu"></div> 
         </div>
     </div>
-    <div class="segment-five">
+    <div class="contact-form">
         <div class="content">
-            <div><h2>¡HAZ UNA RESERVACIÓN!</h2></div>
-            <span>¿Quieres reservar o hacernos alguna pregunta? Envíanos tus datos y te contactaremos a la brevedad :)</span>
-            <span>o llámanos al</span>
+            <h2>¡HAZ UNA RESERVACIÓN!</h2>
+            <p>
+            ¿Quieres reservar o hacernos alguna pregunta? Envíanos tus datos y te contactaremos a la brevedad :)
+            <br> o llámanos al 
             <span><i class="fas fa-phone"></i>
             3629 4947
             </span>
-            <input type="Nombre" placeholder="Nombre*" name="name" id="">
+            </p> 
+            <input type="name" placeholder="Nombre*" name="name" id="">
             <input type="email" placeholder="Email*" name="email" id="">
-            <input type="Nombre" placeholder="Celular*" name="cel" id="">
-            <input type="Nombre" placeholder="Fecha*" name="name" id="">
-            <input type="Nombre" placeholder="Hora*" name="name" id="">
-            <input type="Nombre" placeholder="Comentarios*" name="name" id="">
+            <input type="tel" placeholder="Celular*" name="cel" id="">
+            <div class="mini-input">
+                <input type="date" placeholder="Fecha*" name="name" id="">
+                <input type="time" placeholder="Hora*" name="name" id="">
+            </div>
+            <div class="comment-input">   
+            <input type="text" placeholder="Comentarios*" name="name" id="">
+            </div> 
             <button type="button" name="button">QUIERO MI RESERVACIÓN</button>                     
             </ul> 
         </div>
     </div>
-    <div class="footer-one">
-        <div class="content">
-            <div>
-                <img class="" src="images/icon_phone.png">
-                <span><br>TELÉFONO<br><br></span>
-                <span>3629·4947</span>
+    <footer>
+        <div class="footer-one">
+            <div class="content">
+                <div>
+                    <img class="" src="images/icon_phone.png">
+                    <span><br>TELÉFONO<br><br></span>
+                    <span>3629·4947</span>
+                </div>
+                <div>
+                    <img class="" src="images/icon_location.png">
+                    <span><br>UBICACIÓN<br><br></span>
+                    <span>Av. Ludwig Van Beethoven 5162</span>
+                    <span>La Estancia, 45030 Zapopan, Jal.</span>
+                </div>
+                <div>
+                    <img class="" src="images/icon_clock.png">
+                    <span><br>HORARIO<br><br></span>
+                    <span>lunes     cerrado</span>
+                    <span>martes - jueves      17:30-23:30</span>
+                    <span>viernes      17:30-00:30</span>
+                    <span>sábado    14:30-00:30</span>
+                    <span>domingo    14:30-20:30</span>
+                </div>
             </div>
-            <div>
-                <img class="" src="images/icon_location.png">
-                <span><br>UBICACIÓN<br><br></span>
-                <span>Av. Ludwig Van Beethoven 5162</span>
-                <span>La Estancia, 45030 Zapopan, Jal.</span>
+        </div>
+        <div class="footer-two">
+            <div class="content">
+                <div><img class="" src="images/logo.png"></div>
+                <div class="icons">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
             </div>
-            <div>
-                <img class="" src="images/icon_clock.png">
-                <span><br>HORARIO<br><br></span>
-                <span>lunes     cerrado</span>
-                <span>martes - jueves      17:30-23:30</span>
-                <span>viernes      17:30-00:30</span>
-                <span>sábado    14:30-00:30</span>
-                <span>domingo    14:30-20:30</span>
-            </div>
+        </div>
+    </footer>
+
+    <div id="register" class="modalDialog">
+        <div>
+            <h2>Regístrate</h2>
+            <form class="content" action="#" method="post">
+                <div>
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" name="username" value="" id="name" placeholder="Nombre y Apellido">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" value="" placeholder="8 dígitos">
+                </div>
+                <div>
+                    <a href="#close" title="Close" class="close">Cancelar</a>
+                    <button type="submit" href="#" class="btn">Aceptar</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="footer-two">
-        <div class="content">
-            <div>
-                <img class="" src="images/logo.png">
-            </div>
-
-        </div>
-    </div>        
+    <a href="#register">Registrate</a>
+<script src="js/api.js"></script>
+<script src="js/main.js" async defer></script>           
 </body>
 </html>
