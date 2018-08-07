@@ -1,6 +1,9 @@
 *{
     --bg-color: rgb(248, 244, 245);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --header-size: 70px;
 }
 body {
     font-size: 16px;
@@ -9,15 +12,211 @@ body {
     margin:0;
     letter-spacing: 1px;    
 }
-h1 {
+.btn {
+    background-color: #e51a94;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+}
+.fixed {
+    width: 900px;
+    margin: 0px auto;
+    padding: 30px 0;
+}
+.container {
+    margin-top: var(--header-size);
+}
+/*************** banner ****************/
+.main-banner {
+    height: 500px;
+    background-image: url("../images/caravana_banner.png")
+}
+.main-banner .content {
+    padding-top: 150px;
+    margin: 0 auto;
+    width: 700px;
+} 
+.main-banner h1 span{
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     background-color: #6633cc;
     margin: 6px;
     color: #fff;
-    padding: 0px 30px 0px 20px;
-    display: table-caption;
+    padding: 0px 20px 0px 20px;
+    display: table;
 }
+.main-banner h2 {
+    color: black;
+    font-family: lato;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: -6px 2px 9px #fff;
+} 
+/*************** discount ****************/
+.discount {
+    background-color: black;
+}
+.discount .content {
+    margin: 0 auto;
+    width: 900px;
+    padding: 20px 0px;
+}
+.discount span {
+    font-size: 20px;
+}
+.discount input {
+    font-size: 14px;
+    color: grey;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+} 
+/*************** nosotros ****************/
+.nosotros {
+    display: flex;
+}
+.nosotros .content {
+    width: 50%;
+    margin-left: 100px;
+    padding: 60px 50px 100px 0px;
+}
+.nosotros p {
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.nosotros .people{
+    width: 50%;
+    background-image:  url("../images/people.png");
+    background-position: center center;
+} 
+/*************** promos ****************/
+.promos {
+    background-image: url("../images/bg_yellow.png");
+    text-align: center;
+}
+.promos .content{
+    margin: 0 auto;
+    width: 900px;
+    padding: 30px 0;
+}
+.promos .grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(5, 1fr);
+}
+.promos .big {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.promos img{
+    width: 100%;
+}
+/*************** menu ****************/
+.menu {
+    background-color: #e51a94;
+    text-align: center;
+}
+.menu .hide {
+    display: none;
+}
+.menu h2{
+    color: #fff;    
+}
+.menu .content{
+    margin: 0 auto;
+    width: 900px;
+    padding: 30px 0px;
+    text-align: left;    
+}
+/*************** contact form ****************/
+
+.contact-form {
+    background-image: url("../images/bg_reserva.png");
+    text-align: center;
+}
+.contact-form h2 {
+    color: #fff;
+    margin-: 20px;
+}
+.contact-form p {
+    margin: 14px;
+}
+.contact-form input {
+    width: 45%;
+    margin: 10px; 
+    font-size: 14px;
+    color: grey;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 10px 20px;
+} 
+.contact-form .mini-input {
+    width: 47%;
+    display: inline-flex;
+}
+.contact-form .comment-input input{
+    width: 92%;
+}
+.contact-form .btn {
+    width: 92%;
+    margin-top: 10px;
+}
+
+/*************** contact ****************/
+
+.contact {
+    background-image: url("../images/bg_footer.png");
+    height: 402px;
+}
+.contact .content {
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 72px;
+    justify-content: center;
+    display: grid;
+    grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+.contact div{    
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+.contact span{
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+/*************** social ****************/
+
+.social {
+    background: black;
+    height: 200px;
+    text-align: center;
+}
+.social .content{
+    margin: 0 auto;
+    width: 900px;
+    padding-top: 26px;
+}      
+.social .icons i{
+    text-align: center;
+    font-size: 20px;
+    padding: 22px 10px;
+}
+/*************** hasta aqui llegué ****************/
+
+
+
+
 h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
@@ -27,33 +226,34 @@ h2 {
 h4 {
     margin: 0;
 }
-.navTop {
+.nav-top {
     position: fixed;
     background-image: url("../images/header_bg.png");
     width: 100%;
-    height: 70px;
+    height: var(--header-size);
     display: table-caption;
+    top: 0;
 }
 
-.left {
+.logo {
     display: inline-block;
     padding-left: 60px;
     position: absolute;
 }
-.left img {
+.logo img {
     width: 100px;
     margin-top: 4px;
 } 
-.right {
+.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     float: right;
 }
-.right li {
+.nav-menu li {
     display: inline;
 }
-.right li a{
+.nav-menu li a{
     padding: 10px 20px 0px 0px;
     color: white;
     font-size: 14px;
@@ -61,10 +261,10 @@ h4 {
     display: inline-block;
     margin:17px;
 }
-.right a:hover {
+.nav-menu a:hover {
     text-decoration: underline;
 }
-.right button {    
+.nav-menu button {    
     border: 2px solid #fff;
     border-radius: 20px;
     padding: 10px 20px;
@@ -77,93 +277,7 @@ h4 {
     background-color: transparent;
     box-sizing: border-box;
 }
-.main-banner button {
-    background-color: #e51a94;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    margin-top: 20px;
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-}
-.main-banner {
-    height: 500px;
-    background-image: url("../images/caravana_banner.png")
-}
-.main-banner .content {
-    padding-top: 150px;
-    margin: 0 auto;
-    width: 700px;
-    height: 500px;
-}
-.main-banner span {
-    color: black;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-shadow: -6px 2px 9px #fff;
-}
-.nosotros {
-    display: flex;
-    background-image: url("../images/people.png");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: right;
-}
-.nosotros .content {
-    margin-top: -50px;
-    float: left;
-    width: 40%;
-    margin-left: 100px;
-    padding: 60px 50px 100px 0px;
-}
-.nosotros p {
-    font-size: 16px;
-    color: grey;
-    letter-spacing: 1px;
-    line-height: 30px;
-}
-.nosotros button {
-    background-color: #e51a94;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-}
-.discount {
-    background-color: black;
-    height: 100px;
-    width: 100%;
-}
-.discount .content {
-    width: 800px;
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 26px;
-}
-.discount span {
-    font-size: 20px;
-}
-.discount input {
-    font-size: 14px;
-    color: grey;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    border: none;
-    padding: 10px 20px;
-}
-.discount button {
-    background-color: #e51a94;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-}    
+
 .results {
     width: 800px;
     display: flex;
@@ -177,43 +291,9 @@ h4 {
     color: black;
     font-size: 16px;
 }
-.promos {
-    height: 600px;
-    background-image: url("../images/bg_yellow.png")
-}
-.promos h2 {
-    text-align: center;
-}
-.promos .content{
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 26px;
-}
-.a {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-.wrapper img {
-    width: 100%;
-    display: table-row-group;
-}
-.menu {
-    background-color: #e51a94;
-    height: 600px;
-}
-.menu .hide {
-    display: none;
-}
-.menu h2{
-    color: #fff;
-    text-align: center;
-}
-.menu .content{
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 26px;
-    text-align: left;    
-}
+
+
+
 table {
     float:left;
     margin: 0px 20px;
@@ -233,116 +313,15 @@ table {
 .menu-top li :hover{
     text-decoration: overline;
 }
-.wrapper {
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: repeat(5, 1fr);
-}
+
 .menu-top {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-.contact-form {
-    background-image: url("../images/bg_reserva.png");
-    height: 517px;
-}
-.contact-form h2 {
-    text-align: center;
-    color: #fff;
-    margin: 40px 0px 20px 0px;
-}
 
-.contact-form .content {
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 26px;
-    justify-content: center;
-}
 
-.contact-form p {
-    display: block;
-    text-align: center;
-    margin: 14px;
-}
-/*first of list and last?*/
 
-.contact-form input {
-    width: 400px;
-    margin: 10px; 
-    font-size: 14px;
-    color: grey;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    border: none;
-    padding: 10px 20px;
-}
-.contact-form .mini-input {
-    float: right;
-    width: 473px;
-}
-.contact-form .mini-input input{
-    width: 187px;
-    margin: 10px; 
-    font-size: 14px;
-    color: grey;
-    border-radius: 20px;
-    letter-spacing: 1px;
-    border: none;
-    padding: 10px 20px;
-}  
-.contact-form .comment-input input{
-    width: 92%;
-}
-.contact-form button {
-    background-color: #e51a94;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    width: 92%;
-    margin: 10px;
-}
-.footer-one {
-    background-image: url("../images/bg_footer.png");
-    height: 402px;
-}
-.footer-one .content {
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 72px;
-    justify-content: center;
-    display: grid;
-    grid-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-}
-.footer-one div{    
-    color: #fff;
-    border-radius: 20px;
-    text-align: center;
-}
-.footer-one span{
-    display: block;
-    text-align: center;
-    margin: 5px;
-}
-.footer-two {
-    background: black;
-    height: 200px;
-    text-align: center;
-}
-.footer-two .content{
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 26px;
-}      
-.footer-two .icons i{
-    text-align: center;
-    font-size: 20px;
-    padding: 22px 10px;
-}
 .modalDialog {
     background-color: var(--main-color);
     bottom: 0;
