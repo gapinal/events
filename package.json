@@ -1,0 +1,23 @@
+{
+  "name": "gapinal_portfolio",
+  "version": "1.0.0",
+  "description": "this is my own personal portfolio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gapinal/proyecto_final.git"
+  },
+  "author": "Georgia Andrea Pinal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gapinal/proyecto_final/issues"
+  },
+  "homepage": "https://github.com/gapinal/proyecto_final#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
