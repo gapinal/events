@@ -1,3 +1,14 @@
+/* nav menu*****************************/
+
+let iMenuNode = document.querySelector('header .nav-top .fa-bars');
+let menuNode = document.querySelector('header .nav-top .nav-menu');
+iMenuNode.addEventListener('click', () => {
+    console.log('soy texto y existo')
+    menuNode.classList.toggle('active');
+});
+
+
+/*menu*****************************/
 const bebidas = [
     [
         'Cervezas',
@@ -88,10 +99,11 @@ function getTableStructure(menuData) {
     });
     return tableStructure;
 }
-  
+  /*
 document.getElementById('menu-bebidas').innerHTML = getTableStructure(bebidas);
 document.getElementById('menu-salads').innerHTML = getTableStructure(salads);
- 
+
+
 const menuSelector = document.getElementsByClassName('menu-selector');
 for (i=0; i < menuSelector.length; i++) {
     menuSelector[i].addEventListener('click', function() {
@@ -108,3 +120,4 @@ function hideAllMenus(from = 0) {
     }
 }
 hideAllMenus(1);
+*/

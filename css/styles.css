@@ -5,6 +5,12 @@
     padding: 0;
     --header-size: 70px;
 }
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: rgb(16, 169, 237);
+}
 body {
     font-size: 16px;
     color: var(--bg-color);
@@ -59,11 +65,7 @@ body {
 /*************** discount ****************/
 .discount {
     background-color: black;
-}
-.discount .content {
-    margin: 0 auto;
-    width: 900px;
-    padding: 20px 0px;
+    text-align: center;
 }
 .discount span {
     font-size: 20px;
@@ -75,6 +77,7 @@ body {
     letter-spacing: 1px;
     border: none;
     padding: 10px 20px;
+    margin: 0 5px;
 } 
 /*************** nosotros ****************/
 .nosotros {
@@ -174,12 +177,11 @@ body {
 
 .contact {
     background-image: url("../images/bg_footer.png");
-    height: 402px;
+    
 }
 .contact .content {
-    margin: 0 auto;
-    width: 900px;
-    padding-top: 72px;
+    margin: 0 auto;   
+    padding: 70px;
     justify-content: center;
     display: grid;
     grid-gap: 20px;
@@ -199,7 +201,6 @@ body {
 
 .social {
     background: black;
-    height: 200px;
     text-align: center;
 }
 .social .content{
@@ -211,21 +212,20 @@ body {
     text-align: center;
     font-size: 20px;
     padding: 22px 10px;
+    color: #fff;
 }
-/*************** hasta aqui llegué ****************/
-
-
-
-
-h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-    letter-spacing: 1px;
-    color: rgb(16, 169, 237);
+.social .icons a:hover {
+    font-weight: 800;
 }
-h4 {
-    margin: 0;
+.social .icons a:visited {
+    color: #fff;  
 }
+
+
+
+
+
+/*************** nav-top ****************/
 .nav-top {
     position: fixed;
     background-image: url("../images/header_bg.png");
@@ -234,10 +234,9 @@ h4 {
     display: table-caption;
     top: 0;
 }
-
 .logo {
     display: inline-block;
-    padding-left: 60px;
+    padding-left: 30px;
     position: absolute;
 }
 .logo img {
@@ -261,8 +260,21 @@ h4 {
     display: inline-block;
     margin:17px;
 }
+.nav-menu a{
+    color: #fff;
+    text-decoration: none;    
+}
 .nav-menu a:hover {
-    text-decoration: underline;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-menu a:visited {
+    color: #fff;
+    text-decoration: none;    
+}
+.nav-top i{
+    display: none;
 }
 .nav-menu button {    
     border: 2px solid #fff;
@@ -277,51 +289,7 @@ h4 {
     background-color: transparent;
     box-sizing: border-box;
 }
-
-.results {
-    width: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-between;  
-}
-.results article {
-    width: calc(1/3*100% - 30px);
-    margin: 15px;
-    color: black;
-    font-size: 16px;
-}
-
-
-
-table {
-    float:left;
-    margin: 0px 20px;
-    text-align: unset;
-} 
-.menu-top {
-    list-style-type: none;
-    display: inline-flex;
-    text-transform: uppercase;
-}
-.menu-top li {
-    margin: 0px 10px 30px 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-.menu-top li :hover{
-    text-decoration: overline;
-}
-
-.menu-top {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-
+/*************** modal ****************/
 .modalDialog {
     background-color: var(--main-color);
     bottom: 0;
@@ -348,19 +316,6 @@ table {
     transition: opacity 400ms ease-in;
     width: 400px;
 }
-.modalDialog h2 {
-    margin: 10px;
-}
-.modalDialog button {
-    background-color: #e51a94;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 1px;
-    border: none;
-    float: right;
-}
 .close {
     color: darkgrey;
     text-decoration: none;
@@ -377,4 +332,91 @@ table {
     letter-spacing: 1px;
     border: 2px solid grey;
     padding: 10px 20px;
+    margin: 0px 0px 20px 0px;
 }
+
+/*************** hasta aqui llegué ****************/
+
+@media(max-width: 1100px){
+    .nav-top i {
+        display: block;
+        margin: 28px;
+        float: right;
+    }
+    .nav-menu li, .nav-menu button{
+        display: none;
+        margin: 0;
+        left: 0;
+        top: 50px;
+    }
+    .nav-top .nav-menu.active {
+        display: block;
+    }
+    .nav-top li a {
+        display: block;
+        text-align: left;
+    }
+    .nav-top a:hover {
+        color: #fff;
+        display: block;
+
+    }
+    .discount {
+        display: block;
+    }
+    .fixed {
+        width: 100%
+    }
+    .nosotros .content {
+        width: 100%;
+        display: block;
+        margin-left: 20px;
+
+    }
+    .nosotros .people {
+        display: none;
+    }
+    .contact-form .mini-input, .contact-form input {
+        width: 90%;
+    }
+}
+@media(max-width: 527px){
+    .discount input, .discount button {
+        width: 90%;
+        margin: 5px;
+    }
+    .contact .content {
+        display: block;
+    }
+    .contact .content div{
+        margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+/*************** menu de abajo ****************/
+.menu-top {
+    list-style-type: none;
+    display: inline-flex;
+    text-transform: uppercase;
+}
+.menu-top li {
+    margin: 0px 10px 30px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+table {
+    float:left;
+    margin: 0px 20px;
+    text-align: unset;
+} 
+

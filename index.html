@@ -9,6 +9,7 @@
     <link href="images/favicon.png" rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -19,19 +20,19 @@
                 </a>
             </div>
             <ul class="nav-menu">                    
-                <li><a href="#">NOSOTROS</a></li>
-                <li><a href="#">PROMOCIONES</a></li>
-                <li><a href="#">MENÚ</a></li>
-                <button type="button" name="button">CONTACTO</button>
-                <li><a href="#">HAZ TU RESERVACIÓN</a></li>
-                <li><a href="#"><i class="fas fa-phone"></i>3628·1829</a></li>  
+                <li><a href="#nos">NOSOTROS</a></li>
+                <li><a href="#promos">PROMOCIONES</a></li>
+                <li><a href="#cont">CONTACTO</a></li>
+                <button><a href="#register">REGISTRO</a></button>
+                <li><a href="#"><i class="fas fa-phone"></i>3628·1829</a></li>                  
             </ul>
+            <i class="fas fa-bars"></i>
         </nav>    
     </header>
     <div class="container">
 
         <section class="main-banner">
-            <div class="content">
+            <div class="fixed">
                 <h1>
                     <span>DELICIOSAMENTE</span>
                     <span>DIVERTIDO</span>
@@ -42,7 +43,7 @@
         </section>
 
         <section class="discount">
-            <div class="content">
+            <div class="fixed">
                 <span>¡Obtén tu cupón de DESCUENTO!</span>
                 <input type="name" placeholder="Nombre*" name="name" id="">
                 <input type="email" placeholder="Email*" name="email" id="">
@@ -50,7 +51,7 @@
             </div>
         </section>
         
-        <section class="nosotros">
+        <section class="nosotros" id="nos">
             <div class="content">
                 <h2>NOSOTROS</h2> 
                 <p>El mejor Restaurante dedicado al espacio lúdico de Juegos de Mesa. Contamos con los mejores juegos de mesa, tienda, expertos en diversión y un menú deliciosamente divertido. </p>
@@ -61,8 +62,8 @@
             </div>       
         </section>
 
-        <section class="promos">
-            <div class="content">
+        <section class="promos" id="promos">
+            <div class="fixed">
                 <h2>PROMOCIONES</h2>
                 <div class="grid">
                     <div class="big"><img src="images/promo1.png" alt=""></div>
@@ -76,9 +77,9 @@
             </div>
         </section>
 
-
+<!--
         <section class="menu">
-            <div class="content">
+            <div class="fixed">
                 <h2>MENÚ</h2>
                 <ul class="menu-top">
                     <li class='menu-selector' data-container='menu-bebidas'>bebidas</li>
@@ -92,8 +93,9 @@
                 </div> 
             </div>
         </section>
+-->
 
-        <section class="contact-form">
+        <section class="contact-form" id="cont">
             <div class="fixed">
                 <h2>¡HAZ UNA RESERVACIÓN!</h2>
                 <p>
@@ -145,20 +147,26 @@
         </section>
 
         <section class="social">
-            <div class="content">
+            <div class="fixed">
                 <div><img class="" src="images/logo.png"></div>
                 <div class="icons">
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-f"></i>
+                    <a href="https://twitter.com/?lang=es" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/caravana_bistro/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>    
+                    <a href="https://www.facebook.com/CaravanaBistro/" target="_blank">
+                        <i class="fab fa-facebook-f"></i> 
+                    </a>    
                 </div>
             </div>
         </section>
     </footer>
-
+    
     <div id="register" class="modalDialog">
         <div>
-            <h2>Regístrate</h2>
+            <h2>Regístrate a las Mejores Promociones</h2>
             <form class="content" action="#" method="post">
                 <div>
                     <label for="username">Nombre de usuario</label>
@@ -175,7 +183,6 @@
             </form>
         </div>
     </div>
-    <a href="#register">Registrate</a>
 <script src="js/api.js"></script>
 <script src="js/main.js" async defer></script>           
 </body>
