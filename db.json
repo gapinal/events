@@ -1,0 +1,30 @@
+{
+    "names": [
+        {
+        "id": 1,
+        "name": "Andrea",
+        "email": "pinal@gmail.com",
+        "password": "123456",
+        "sku": 1627
+        },
+        {
+        "id": 2,
+        "name": "Ramon",
+        "email": "pinal@gmail.com",
+        "password": "123456",
+        "sku": 1628
+        }
+    ],
+    "events": [
+        {
+        "id": 2,
+        "type": "Rock",
+        "artist": "Bob"
+        },
+        {
+        "id": 2,
+        "type": "Pop",
+        "artist": "Ross"
+        }
+    ]
+}
